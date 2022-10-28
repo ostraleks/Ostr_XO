@@ -37,7 +37,7 @@ def start(update, _):
 def choice(update, _):
     global player, count
     move = update.message.text
-    if move.isdigit() == False:
+    if not move.isdigit():
         update.message.reply_text(f"Incorrect input{chr(9940)}\nTry again")
     move = int(move)
     if move not in fld:
